@@ -1,0 +1,11 @@
+Ingress doesn't work with minikube
+Try to use kind for local development with kuber
+
+Tutorial: https://techdozo.dev/getting-started-with-kind-quick-start-a-multi-node-local-kubernetes-cluster/
+
+Cluster setup:
+
+cmd: kind create cluster --config kind-ingress.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/kind/deploy.yaml
+
+After this ingress will look at http://localhost:81/
