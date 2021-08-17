@@ -15,4 +15,12 @@ build:
       sync:
        manual:
         - src: 'src/**/*.ts'
-          dest: .   
+          dest: .
+    - image: nicknevokshonov/tickets
+      context: tickets
+      docker:
+        dockerfile: Dockerfile
+      sync:
+       manual:
+        - src: 'src/**/*.ts'
+          dest: .  
